@@ -1,0 +1,20 @@
+CREATE TABLE WITH CONSTRAINTS
+
+CREATE DATABASE kishore;
+use kishore ;
+
+CREATE Table employee 
+(
+id int NOT NULL, 
+name VARCHAR(20) NOT NULL , 
+salary DOUBLE , 
+constraint unique_id UNIQUE(id) , 
+constraint salary_check Check (salary > 1000) 
+);
+
+INSERT into employee VALUES (1, 'kishore' , 10000);
+
+INSERT into employee VALUES (2, 'Raja' , 10540) , (3, 'kumar' , 14500) , (4, 'jaanu' , 10054) ;
+
+
+SELECT * FROM employee;
